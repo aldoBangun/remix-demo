@@ -14,6 +14,12 @@ Then edit `DATABASE_URL` with MySQL database URL string that you can get either 
 
 ## Development
 
+Use pnpm to handle the dependencies, if it's not installed yet, install using npm:
+
+```sh
+npm i -g pnpm
+```
+
 To run your Remix app locally, make sure your project's local dependencies are installed:
 
 ```sh
