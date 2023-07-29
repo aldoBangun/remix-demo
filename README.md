@@ -20,6 +20,20 @@ To run your Remix app locally, make sure your project's local dependencies are i
 pnpm install
 ```
 
+Make sure to push the schema to the database every time there's a change in the Prisma schema:
+
+```sh
+pnpm db:push
+# prisma db push
+```
+
+Or you can also generate the schema for Prisma Client, for the app to use:
+
+```sh
+pnpm db:gen
+# prisma generate
+```
+
 Afterwards, start the Remix development server like so:
 
 ```sh
