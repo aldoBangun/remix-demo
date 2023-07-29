@@ -2,14 +2,22 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+export type DataTodo = {
+  text: string;
+  isCompleted?: boolean;
+};
+
+const dataTodos: DataTodo[] = [
+  { text: "Bangun" },
+  { text: "Sarapan" },
+  { text: "Mandi" },
+];
+
 async function main() {
   // Seed your database here
   // You can do something like this:
-  await prisma.todo.create({
-    data: {
-      text: "Bangun tidur",
-      isCompleted: true,
-    },
+  await prisma.todo.createMany({
+    data: dataTodos,
   });
 }
 
